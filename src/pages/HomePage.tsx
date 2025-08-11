@@ -1,39 +1,35 @@
-import React, { useEffect } from 'react';
-import Hero from '../components/home/Hero';
-import Mission from '../components/home/Mission';
-import Projects from '../components/home/Projects';
-import Statistics from '../components/home/Statistics';
-import Testimonials from '../components/home/Testimonials';
-import Newsletter from '../components/common/Newsletter';
+import React, { useEffect } from "react";
+import Hero from "../components/home/Hero";
+import Mission from "../components/home/Mission";
+import Projects from "../components/home/Projects";
+import Statistics from "../components/home/Statistics";
+import Testimonials from "../components/home/Testimonials";
+import PartnerCarousel from "../components/home/partner";
+import Awards from "../components/home/Awards";
+import VolunteersSlider from "../components/home/volunteers";
 
 const HomePage: React.FC = () => {
-  // Set page title
   useEffect(() => {
-    document.title = 'Noble Citizen Foundation - Empowering Communities';
+    document.title = "Noble Citizen Foundation - Empowering Communities";
   }, []);
 
   return (
     <div>
       <Hero />
       <Mission />
+      <Awards />
       <Projects />
       <Statistics />
       <Testimonials />
-      
-      {/* Newsletter Section */}
-      <section className="section bg-gray-50">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="mb-4">Stay Updated</h2>
-            <p className="text-lg text-gray-600 mb-8">
-              Subscribe to our newsletter to receive updates on our projects, events, and ways to get involved.
-            </p>
-            <div className="max-w-md mx-auto">
-              <Newsletter />
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="text-center max-w-3xl mx-auto ">
+        <h2 className="mb-6">Our Partners</h2>
+        <p className="text-m text-gray-600 ">
+          Thanks to our partners and supporters, we're turning dreams into
+          reality. Join us in shaping a brighter future!
+        </p>
+      </div>
+      <PartnerCarousel />
+      <VolunteersSlider />
     </div>
   );
 };

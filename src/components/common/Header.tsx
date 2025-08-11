@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
+import mainLogo from "../../assets/main_logo.webp";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Header: React.FC = () => {
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { name: "Projects", path: "/projects" },
-    { name: "Get Involved", path: "/get-involved" },
+    { name: "Annual Reports", path: "/annual-reports" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
   ];
@@ -53,11 +54,7 @@ const Header: React.FC = () => {
     >
       <div className="container-custom flex justify-between items-center h-full">
         <Link to="/" className="flex items-center">
-          <img
-            src="https://mlosrx4qi7ys.i.optimole.com/cb:kUnT.1c293/w:auto/h:auto/q:mauto/ig:avif/https://noblecitizenfoundation.org/wp-content/uploads/2024/04/cropped-ncf-new-icon.png"
-            alt="NCF Logo"
-            className="w-20 h-20 object-contain"
-          />
+          <img src={mainLogo} alt="logo" className="w-20 h-20 object-contain" />
         </Link>
 
         {/* Mobile Menu Button */}

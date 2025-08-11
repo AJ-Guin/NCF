@@ -1,6 +1,5 @@
 import React from "react";
-import VishvasImage from "../../assets/Vishvas.webp";
-import newz from "../../assets/newz.webp";
+import FeaturedPostsSection from "./FeaturedPosts";
 
 import {
   Target,
@@ -66,7 +65,7 @@ const Mission: React.FC = () => {
   ];
 
   return (
-    <section className="section bg-white">
+    <section className="section bg-white py-0">
       <div className="container-custom">
         <div className="text-center max-w-4xl mx-auto mb-16">
           <h2 className="mb-6">Our Focus Areas</h2>
@@ -103,97 +102,14 @@ const Mission: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2
-              className="mb-6 text-3xl  font-semibold text-gray-800 tracking-tight"
-              style={{ color: "#7F1D1D" }}
-            >
-              Featured Posts
-            </h2>
-            <p className="text-gray-600 text-sm md:text-base">
-              Stay updated with the latest from Noble Citizen Foundation.
-            </p>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-10 justify-center items-stretch mt-10 ">
-            {/* Post 1 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full  md:w-1/2 transition-transform hover:scale-105 duration-300">
-              <img
-                src={VishvasImage}
-                alt="Post 1"
-                className="w-full object-cover"
-              />
-
-              <div className="p-9 flex flex-col justify-between">
-                <div>
-                  <div className="flex items-center mb-3 space-x-2">
-                    <img
-                      src="https://mlosrx4qi7ys.i.optimole.com/cb:kUnT.1c293/w:100/h:34/q:mauto/ig:avif/https://noblecitizenfoundation.org/wp-content/uploads/elementor/thumbs/jagran-josh-logo-freelogovectors.net_-qxz4aaw1i46rg3s0t2ugqze7ysnc0vxwx3h1fre0r8.png"
-                      alt="Logo"
-                      className="w-19 h-6 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    Noble Citizen Foundation Organises Cyber Awareness Program
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    The Noble Citizen Foundation and Vishwas News organised a
-                    media literacy and cyber awareness program in collaboration
-                    with Hansraj College...
-                  </p>
-                </div>
-
-                <a
-                  href="https://www.thedailyjagran.com/india/noble-citizen-foundation-and-vishwas-news-organise-media-literacy-and-cyber-awareness-program-in-collaboration-with-hansraj-college-10200924"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block text-sm text-blue-600 font-semibold hover:underline"
-                >
-                  Read More
-                </a>
-              </div>
-            </div>
-
-            {/* Post 2 */}
-            <div className="bg-white rounded-xl shadow-lg overflow-hidden w-full md:w-1/2 transition-transform hover:scale-105 duration-300">
-              <img src={newz} alt="Post 1" className="w-full  object-cover" />
-              <div className="p-9 flex flex-col justify-between w-full">
-                <div>
-                  <div className="flex items-center mb-3 space-x-2">
-                    <img
-                      src="https://mlosrx4qi7ys.i.optimole.com/cb:kUnT.1c293/w:100/h:34/q:mauto/ig:avif/https://noblecitizenfoundation.org/wp-content/uploads/elementor/thumbs/jagran-josh-logo-freelogovectors.net_-qxz4aaw1i46rg3s0t2ugqze7ysnc0vxwx3h1fre0r8.png"
-                      alt="Logo"
-                      className="w-19 h-6 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">
-                    Noble Citizen Foundation Organises Tree Plantation Drive
-                  </h3>
-                  <p className="text-sm text-gray-600 leading-relaxed">
-                    The Noble Citizen Foundation organised a tree plantation
-                    drive at Smriti Vatika in Gurugram, encouraging
-                    environmental responsibility...
-                  </p>
-                </div>
-                <a
-                  href="https://www.thedailyjagran.com/india/noble-citizen-foundation-organises-tree-plantation-drive-at-smriti-vatika-in-gurugram-10222012"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block text-sm text-blue-600 font-semibold hover:underline"
-                >
-                  Read More
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Featured Posts Section */}
+        <FeaturedPostsSection />
 
         {/* Mission Statement Section */}
         <div className="mt-20 bg-gray-50 rounded-2xl p-8 md:p-12">
           <div className="text-center max-w-4xl mx-auto">
             <div className="mb-8">
-              <h2 className="mb-6">Our Mission & Vision</h2>
+              <h2 className="mb-15">Our Mission & Vision</h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -223,17 +139,43 @@ const Mission: React.FC = () => {
               </div>
             </div>
 
-            <div className="mt-12 p-6 bg-primary-600 rounded-xl text-white">
-              <h3 className="text-xl font-semibold mb-3">
-                Our 2030 Commitment
-              </h3>
-              <p className="text-lg">
-                We are committed to impacting{" "}
-                <strong>5 million lives by 2030</strong>, creating lasting
-                positive change and ensuring sustainable development for
-                communities worldwide.
-              </p>
-            </div>
+            <section>
+              {/* Progress bars section */}
+              <div className="mt-10 bg-white rounded-xl shadow p-8">
+                <h3 className="text-2xl font-semibold text-center mb-6 text-primary-600">
+                  Our 2030 Commitment
+                </h3>
+                {/* Funds Raised */}
+                <div className="w-full bg-gray-200 rounded-full overflow-hidden h-5 mb-4">
+                  <div
+                    className="h-full animate-shine bg-gradient-to-r from-orange-500 via-orange-400 to-orange-500"
+                    style={{ width: "40%" }} // You can make this dynamic using props
+                  ></div>
+                </div>
+                <p className="text-base text-center mt-2 mb-10 font-medium text-black">
+                  <strong className="text-green-800  font-semibold">
+                    1,800 KG of 5,000 KG garbage{" "}
+                  </strong>{" "}
+                  collected towards our clean-up goal
+                </p>
+
+                {/* People Reached */}
+                <div className="w-full bg-gray-200 rounded-full overflow-hidden h-5 mb-4">
+                  <div
+                    className="h-full animate-shine bg-gradient-to-r from-green-700 via-green-550 to-green-700"
+                    style={{ width: "30%" }} // You can make this dynamic using props
+                  ></div>
+                </div>
+                <p className="text-base text-center mt-4 font-medium text-gray-800">
+                  We are committed to impacting{" "}
+                  <strong className="text-primary-600 font-semibold">
+                    5 million lives by 2030
+                  </strong>
+                  , creating lasting positive change and ensuring sustainable
+                  development for communities worldwide.
+                </p>
+              </div>
+            </section>
           </div>
         </div>
       </div>
